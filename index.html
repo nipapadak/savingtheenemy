@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="step1" class="focused">
+  <button class="yes">Yes</button>
+  <button class="no">No</button>
+</section>
+<section id="step2">
+  <button class="yes">Yes</button>
+  <button class="no">No</button>
+</section>
+<section id="step3">
+  <button class="yes">Yes</button>
+  <button class="no">No</button>
+</section>
+<section id="step4">
+  <button data-next="step5-yes" class="yes">Yes</button>
+  <button data-next="step5-no" class="no">No</button>
+</section>
+<section id="step5-yes">
+</section>
+<section id="step5-no">
+</section>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>
