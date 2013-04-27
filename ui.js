@@ -1,6 +1,6 @@
 var answers = {}
 
-$('button').on('click', function() {
+$('.next').on('click', function() {
   var $this = $(this);
   var $step = $this.closest('section');
   var nextStep = parseInt($step.attr('id').split('step')[1]) + 1;
