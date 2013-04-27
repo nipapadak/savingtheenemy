@@ -33,8 +33,6 @@
   <div class="wrapper">
     <h2>Zehad investigates and finds Najah, the wounded soldier to have fatal wounds.</h2>
     <div>Without medical help, Najah would die.</div>
-    <div>Upon investigation Zehad finds Najah is holding a live hand grenade.</div>
-    <div>Zehad also finds Najah has photos of his family.</div>
     <div>If you were Zehad, would you stabilize Najah or execute him?</div>
     <button class="yes">Help Zehad using your medical supplies.</button>
     <button class="no">Execute Najah.</button>
@@ -42,14 +40,18 @@
 </section>
 <section id="step4">
   <div class="wrapper">
-    <div>Zehad</div>
-    <button data-next="step5-yes" class="yes">Yes</button>
-    <button data-next="step5-no" class="no">No</button>
+    <div>Upon further investigation, Zehad finds Najah is holding a live hand grenade.</div>
+    <div>Zehad also finds Najah has photos of his family.</div>
+    <div>If you were Zehad, would you consider the hand grenade a threat, or continue to help him?</div>
+    <button data-next="step5-yes" class="yes">Continue to help Najah, even though he has a live hand grenade?</button>
+    <button data-next="step5-no" class="no">Or defend yourself and execute Najah?</button>
   </div>
 </section>
 <section id="step5-yes">
+  <div>Zehad helps Najah using his medical supplies.</div>
 </section>
 <section id="step5-no">
+  <div>Najah was killed.</div>
 </section>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
