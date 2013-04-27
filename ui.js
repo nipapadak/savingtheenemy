@@ -9,7 +9,7 @@ $('button').on('click', function() {
   answers[$step.attr('id')] = this.className;
 
   /* Hide the current step */
-  $step.removeClass('focused');
+  $step.removeClass('focused').addClass('completed');
 
   /* Show the next step */
   if ($this.data('next')) {
