@@ -1,19 +1,19 @@
 @font-face {
   font-family: 'Amatic';
-  src: url('AmaticSC-Regular-webfont.eot'); /* IE9 Compat Modes */
-  src: url('AmaticSC-Regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('AmaticSC-Regular-webfont.woff') format('woff'), /* Modern Browsers */
-  url('AmaticSC-Regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('fonts/AmaticSC-Regular-webfont.eot'); /* IE9 Compat Modes */
+  src: url('fonts/AmaticSC-Regular-webfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/AmaticSC-Regular-webfont.woff') format('woff'), /* Modern Browsers */
+  url('fonts/AmaticSC-Regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
   url('AmaticSC-Regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 @font-face {
   font-family: 'Amatic';
   font-weight: bold;
-  src: url('Amatic-Bold-webfont.eot'); /* IE9 Compat Modes */
-  src: url('Amatic-Bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('Amatic-Bold-webfont.woff') format('woff'), /* Modern Browsers */
-  url('Amatic-Bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('fonts/Amatic-Bold-webfont.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Amatic-Bold-webfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/Amatic-Bold-webfont.woff') format('woff'), /* Modern Browsers */
+  url('fonts/Amatic-Bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
   url('Amatic-Bold-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
