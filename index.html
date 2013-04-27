@@ -47,9 +47,17 @@
       var q1Video = document.getElementById("q1video");
       q1video.style.display="block";
       q1Video.play();
-      
+      q1Video.addEventListener("ended", function() {
+        var q1Content = document.getElementById("q1Content");
+        q1Content.style.display="block";
+      }, false);
     }, false);
   </script>
+  <!--q1 questions-->
+  <div style="display: none;" id="q1Content">
+    <button class="next" value="yes">Follow orders and enter the bunker?</button>
+    <button class="next" value="no">Or disobey orders and become a deserter?</button>
+  </div>
   <!--<button class="yes">Follow orders and enter the bunker?</button>
   <button class="no">Or disobey orders and become a deserter?</button>-->
   <!--<div class="background">
