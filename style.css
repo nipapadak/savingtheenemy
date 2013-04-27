@@ -6,7 +6,7 @@ html, body {
 }
 
 button {
-  background: #f33;
+  background: rgba(255, 51, 51, 0.9);
   border: 0;
   border-radius: 80px;
   color: #fff;
@@ -22,29 +22,35 @@ h2 {
   font-size: 72px;
   line-height: 72px;
   margin-bottom: 12px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 section {
-  display: table;
+  background: #000;
   font-size: 32px;
   font-weight: bold;
   height: 100%;
-  left: 100%;
+  left: 0;
+  opacity: 0;
   overflow: hidden;
   position: absolute;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   top: 0;
-  transition-property: left;
+  transition-property: opacity;
   transition-duration: 1s;
   width: 100%;
+  z-index: 0;
 }
 
 section.focused {
-  left: 0;
+  display: table;
+  opacity: 1;
+  z-index: 1;
 }
 
 section.completed {
-  left: -100%;
+  display: table;
+  opacity: 1;
 }
 
 .background {
