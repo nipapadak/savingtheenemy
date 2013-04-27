@@ -5,7 +5,40 @@
 </head>
 <body>
 <section id="step1" class="focused">
-  <div class="background">
+  <!--loop intro-->
+  <video autoplay loop src="01_battlefield_trans.mp4"></video>
+  <!--button to kill loop, and go into q1-->
+  <button id="startQ1">Start?</button>
+  <!--q1 video to bunker-->
+  <video id="q1video" src="01_battlefield_trans.mp4"></video>
+  <!--3 blocks of text, 5 seconds each-->
+  <div id="q1text"></div>
+  <script src="https://raw.github.com/mozilla/popcorn-js/master/popcorn.js"></script>
+  <script src="https://raw.github.com/mozilla/popcorn-js/master/plugins/text/popcorn.text.js"></script>
+  <script>
+    var p = Popcorn("#q1video");
+    p.text({
+       start: 5,
+       end: 10,
+       target: "q1text",
+       text: "first"
+     })
+     .text({
+       start: 10,
+       end: 15,
+       target: "q1text",
+       text: "second"
+     })
+     .text({
+       start: 15,
+       end: 20,
+       target: "q1text",
+       text: "third"
+     });
+  </script>
+  <!--<button class="yes">Follow orders and enter the bunker?</button>
+  <button class="no">Or disobey orders and become a deserter?</button>-->
+  <!--<div class="background">
     <img src="http://www.download-wallpaper.co.uk/main.php?g2_view=core.DownloadItem&g2_itemId=102&g2_serialNumber=2">
   </div>
   <div class="wrapper">
@@ -13,7 +46,7 @@
     <p>If you were Zahed, Would you enter the bunker, following orders and risking your life or leave now, ensuring your safety but becoming a deserter?</p>
     <button class="yes">Follow orders and enter the bunker?</button>
     <button class="no">Or disobey orders and become a deserter?</button>
-  </div>
+  </div>-->
 </section>
 <section id="step2">
   <div class="background">
