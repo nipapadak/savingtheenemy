@@ -18,23 +18,9 @@
 }
 
 html, body {
-    background: #fff;
+    background: #bababa;
     color: #fff;
     font-family: Helvetica, Arial, sans-serif;
-}
-
-h2 {
-    font-family:  'Amatic';
-    font-size: 72px;
-    line-height: 72px;
-    margin-bottom: 12px;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    background: #000;
-}
-
-section p {
-    font-family: 'Amatic';
-    background: #000;
 }
 
 .chart {
@@ -44,4 +30,13 @@ section p {
     width:600px;
     height:400px;
     position:relative;
+}
+
+section p {
+    border: 0;
+    color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    margin: 0px 50px 0 260px;
+    width: 100px;
 }
