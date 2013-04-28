@@ -16,6 +16,7 @@
   </div>
   <div class="wrapper" id="titleWrapper">
     <h2>Saving the Enemy</h2>
+    <p>prototype</p>
     <!--button to kill loop, and go into q1-->
     <div class="button-wrapper">
       <button id="startQ1" class="dogtag"><span>begin</span></button>
@@ -135,6 +136,28 @@
   <div class="background">
     <video id="q4video" src="media/vid/01_battlefield_trans.mp4"></video>
   </div>
+  <div class="wrapper" style="display: none;" id="splitWrapper">
+    <h2>But do you have all the facts? Switch to Chris's point of view or continue with John.</h2>
+    <!--button to kill loop, and go into q1-->
+    <div class="button-wrapper">
+      <button id="chrisButton" class="dogtag"><span>Follow Chris</span></button>
+      <button id="johnButton" class="dogtag"><span>Follow John</span></button>
+    </div>
+  </div>
+  <script>
+    var q4 = Popcorn("#q4video");
+
+    // cue this time at the split.
+    q4.cue( 4, function() {
+      q4.pause();
+      var splitWrapper = document.getElementById("splitWrapper");
+      splitWrapper.style.display = "table-cell"
+      document.getElementById("johnButton").addEventListener("click", function() {
+        splitWrapper.style.display = "none";
+        q4.play();
+      }, false);
+    });
+  </script>
   <!--q4 question-->
   <div style="display: none;" class="qWrapper left" id="q4Content">
     <h2>Would you attempt to save this soldier and risk being killed for treason, or follow orders and kill him?</h2>
