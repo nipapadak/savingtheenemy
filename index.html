@@ -24,6 +24,7 @@
   <!--create popcorn text track events for q1 video-->
   <script>
     var pIntro = Popcorn("#introLoop");
+console.log(pIntro.media.duration);
     pIntro.cue(pIntro.duration()-1, function() {
 console.log("in cue");
       pIntro.currentTime(0).play();
