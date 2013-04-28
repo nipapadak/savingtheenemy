@@ -165,8 +165,8 @@
     <script>
         document.getElementById("q5-yes-video").addEventListener("ended", function() {
             console.log("should load infographic");
-            $( "#step5-yes").remove('focused').add('completed');
-            $( "#step6").add('focused');
+            $( "#step5-yes").removeClass('focused').addClass('completed');
+            $( "#step6").addClass('focused');
         }, false);
     </script>
 </section>
