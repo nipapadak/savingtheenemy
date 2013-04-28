@@ -168,14 +168,19 @@
     </div>
   </div>
   <!--script to load question 4 video content when video finishes-->
-  <script>
-    document.getElementById("q4video").addEventListener("ended", function() {
-      document.getElementById("q4Content").style.display="block";
-    }, false);
-  </script>
+    <script>
+        document.getElementById("q4video").addEventListener("ended", function() {
+            document.getElementById("q4Content").style.display="block";
+            $('#q4Content').find('.next').on('click', function() {
+                document.getElementById("q5video").play();
+            });
+        }, false);
+    </script>
+
 </section>
 
 <section id="step5-yes">
+    <video id="q5video" src="media/vid/01_battlefield_trans.mp4"></video>
   <h2>Zehad helps Najah using his medical supplies.</h2>
 </section>
 <section id="step5-no">
