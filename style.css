@@ -105,3 +105,11 @@ section p {
   text-align: center;
   vertical-align: middle;
 }
+
+#q1text > div {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 100%;
+  text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;
+}
