@@ -2,7 +2,6 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="infographicStyle.css">
   <script src="https://raw.github.com/mozilla/popcorn-js/master/popcorn.js"></script>
   <script src="https://raw.github.com/mozilla/popcorn-js/master/plugins/text/popcorn.text.js"></script>
 </head>
@@ -164,7 +163,6 @@
     <!--script to load question infographic-->
     <script>
         document.getElementById("q5-yes-video").addEventListener("ended", function() {
-            console.log("should load infographic");
             $( "#step5-yes").removeClass('focused');
             $( "#step5-yes").addClass('completed');
             $( "#step6").addClass('focused');
@@ -174,32 +172,25 @@
 
 
 <section id="step5-no">
-    <video id="q5-no-video" src="media/vid/01_battlefield_trans.mp4"></video>
-  <h2>Najah was killed.</h2>
+  <!--<h2>Najah was killed.</h2>-->
+    <div class="background">
+        <video id="q5-no-video" src="media/vid/01_battlefield_trans.mp4"></video>
+    </div>
+    <!--script to load question infographic-->
+    <script>
+        document.getElementById("q5-no-video").addEventListener("ended", function() {
+            $( "#step5-no").removeClass('focused');
+            $( "#step5-no").addClass('completed');
+            $( "#step6").addClass('focused');
+        }, false);
+    </script>
 </section>
 
 
 
 
 <section id="step6">
-
-        <!--<p>Saved by Region</p>-->
-        <div id="chartdiv1" class="chart">
-        </div>
-
-    <!--<section>-->
-        <!--<p>Saved by Ethnicity</p>-->
-        <!--<div id="chartdiv2" class="chart">-->
-        <!--</div>-->
-    <!--</section>-->
-
-    <!--<section>-->
-        <!--<p>Saved by Religion</p>-->
-        <!--<div id="chartdiv3" class="chart">-->
-        <!--</div>-->
-    <!--</section>-->
-
-
+    <!--Insert infographic HTML here-->
 </section>
 
 
