@@ -1,7 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Armata);
+
 html, body {
   background: #000;
   color: #fff;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Armata', sans-serif;
   overflow: hidden;
 }
 
@@ -14,10 +16,11 @@ button {
 
 h2 {
   font-family: 'Armata', sans-serif;
-  font-size: 72px;
-  line-height: 72px;
+  font-size: 64px;
+  line-height: 64px;
   margin-bottom: 12px;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
 }
 
 section {
@@ -83,12 +86,11 @@ section p {
   color: #fff;
   display: table;
   float: left;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Armata', sans-serif;
   font-size: 18px;
-  font-style: italic;
-  height: 134px;
   margin: 0 20px;
-  width: 247px;
+  padding: 0;
+  text-align: center;
 }
 
 .dogtag:hover {
@@ -97,8 +99,10 @@ section p {
 
 .dogtag > span {
   display: table-cell;
+  height: 84px;
   padding: 20px 35px 30px 60px;
   vertical-align: middle;
+  width: 152px;
 }
 
 .wrapper {
