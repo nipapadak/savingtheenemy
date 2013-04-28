@@ -56,6 +56,9 @@
       q1Video.addEventListener("ended", function() {
         var q1Content = document.getElementById("q1Content");
         q1Content.style.display="block";
+        $('#q1Content .next').on('click', function() {
+          document.getElementById("q2video").play();
+        });
       }, false);
     }, false);
   </script>
