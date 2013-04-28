@@ -97,10 +97,14 @@
   <!--script to load question 2 video content when video finishes-->
   <script>
     document.getElementById("q2video").addEventListener("ended", function() {
-      document.getElementById("q2Content").style.display="block";
-      $('#q2Content').find('.next').on('click', function() {
-        document.getElementById("q3video").play();
-      });
+//      document.getElementById("q2Content").style.display="block";
+//      $('#q2Content').find('.next').on('click', function() {
+//        document.getElementById("q3video").play();
+//      });
+        document.getElementById("q3Content").style.display="block";
+        $('#q3Content').find('.next').on('click', function() {
+            document.getElementById("q4video").play();
+        });
     }, false);
   </script>
 </section>
@@ -141,6 +145,7 @@
   <!--script to load question 4 video content when video finishes-->
     <script>
         document.getElementById("q4video").addEventListener("ended", function() {
+            console.log("q5 video");
             document.getElementById("q4Content").style.display="block";
             $('#q4Content').find('.next').on('click', function() {
                 document.getElementById("q5video").play();
