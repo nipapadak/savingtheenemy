@@ -11,7 +11,7 @@
   <!--loop intro-->
   <!--webm of these videos?-->
   <div class="background">
-    <video id="introLoop" autoplay loop src="media/vid/01_battlefield_trans.mp4"></video>
+    <video id="introLoop" autoplay src="media/vid/01_battlefield_trans.mp4"></video>
   </div>
   <!--button to kill loop, and go into q1-->
   <button id="startQ1">begin</button>
@@ -23,6 +23,10 @@
   <div id="q1text"></div>
   <!--create popcorn text track events for q1 video-->
   <script>
+    document.getElementById("introLoop").addEventListener("ended", function () {
+      this.currentTime = 0;
+    }, false);
+
     var p = Popcorn("#q1video");
     p.text({
        start: 5,
