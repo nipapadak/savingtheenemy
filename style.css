@@ -16,8 +16,8 @@ button {
 
 h2 {
   font-family: 'Armata', sans-serif;
-  font-size: 64px;
-  line-height: 64px;
+  font-size: 48px;
+  line-height: 52px;
   margin-bottom: 12px;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
@@ -114,24 +114,28 @@ section p {
 }
 
 .qWrapper {
-  position: static;
+  position: absolute;
   text-align: center;
+  top: 50px;
   vertical-align: middle;
+  width: 800px;
 }
 
 .left {
-  padding: 0 50% 0 0;
+  left: 50px;
 }
 
 .right {
-  padding: 0 0 0 50%;
+  right: 50px;
 }
 
 #q1text > div {
+  font-size: 40px;
   transition-property: opacity;
   transition-duration: 2s;
   position: absolute;
   left: 0;
+  line-height: 140%;
   width: 100%;
   text-align: center;
   bottom: 10%;
