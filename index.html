@@ -157,16 +157,16 @@
 </section>
 
 <section id="step5-yes">
-    <h2>Zehad helps Najah using his medical supplies.</h2>
+    <!--<h2>Zehad helps Najah using his medical supplies.</h2>-->
     <div class="background">
         <video id="q5-yes-video" src="media/vid/01_battlefield_trans.mp4"></video>
     </div>
-    <!--script to load question 4 video content when video finishes-->
+    <!--script to load question infographic-->
     <script>
         document.getElementById("q5-yes-video").addEventListener("ended", function() {
             console.log("should load infographic");
-            document.getElementById( "step5-yes").removeClass('focused').addClass('completed');
-            document.getElementById( "step6").addClass('focused');
+            document.getElementById( "step5-yes").classList.remove('focused').classList.add('completed');
+            document.getElementById( "step6").classList.add('focused');
         }, false);
     </script>
 </section>
