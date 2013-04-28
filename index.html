@@ -23,9 +23,10 @@
   <div id="q1text"></div>
   <!--create popcorn text track events for q1 video-->
   <script>
-    document.getElementById("introLoop").addEventListener("ended", function () {
-      this.currentTime = 0;
-    }, false);
+    var pIntro = Popcorn("#introLoop");
+    pIntro.cue(pIntro.duration()-1, function() {
+      pIntro.play(0);
+    });
 
     var p = Popcorn("#q1video");
     p.text({
