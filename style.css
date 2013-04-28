@@ -1,5 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Armata);
 
+@font-face {
+  font-family: 'Neuzon';
+  src: url('fonts/26CC37_0_0.eot'); /* IE9 Compat Modes */
+  src: url('fonts/26CC37_0_0.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/26CC37_0_0.woff') format('woff'), /* Modern Browsers */
+  url('fonts/26CC37_0_0.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
 html, body {
   background: #000;
   color: #fff;
@@ -15,9 +23,12 @@ button {
 }
 
 h1 {
-  font-family: 'Armata', sans-serif;
-  font-size: 72px;
+  font-family: 'Neuzon', sans-serif;
+  font-size: 96px;
+  font-weight: normal;
+  margin-bottom: 32px;
   text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
 }
 
 h2 {

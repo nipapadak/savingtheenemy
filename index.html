@@ -2,8 +2,8 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
-  <script src="//raw.github.com/mozilla/popcorn-js/master/popcorn.js"></script>
-  <script src="popcorn.text.js"></script>
+  <script src="https://raw.github.com/mozilla/popcorn-js/master/popcorn.js"></script>
+  <script src="https://raw.github.com/mozilla/popcorn-js/master/plugins/text/popcorn.text.js"></script>
 </head>
 <body>
 
@@ -11,19 +11,23 @@
   <!--loop intro-->
   <!--webm of these videos?-->
   <div class="background">
-    <img src="01_intro_title_01.png">
+    <img src="media/img/01_intro_title_01.png">
     <!--<video id="introLoop" src="media/vid/01_battlefield_trans.mp4"></video>-->
   </div>
   <div class="wrapper" id="titleWrapper">
-    <h2>Saving the Enemy</h2>
+    <h1>Saving the Enemy</h1>
+    <p>(Prototype)</p>
     <!--button to kill loop, and go into q1-->
     <div class="button-wrapper">
-      <button id="startQ1" class="dogtag"><span>begin</span></button>
+      <button id="startQ1" class="dogtag"><span>Begin</span></button>
     </div>
   </div>
   <!--q1 video to bunker-->
   <div class="background">
-    <video style="display:none;" id="q1video" src="media/vid/01_battlefield_trans.mp4"></video>
+    <video style="display:none;" id="q1video">
+      <source src="media/vid/01.mp4">
+      <source src="media/vid/01.webm">
+    </video>
   </div>
   <!--3 blocks of text, 5 seconds each-->
   <div id="q1text"></div>
@@ -84,7 +88,10 @@
 
 <section id="step2">
   <div class="background">
-    <video id="q2video" src="media/vid/01_battlefield_trans.mp4"></video>
+    <video id="q2video">
+      <source src="media/vid/02.mp4">
+      <source src="media/vid/02.webm">
+    </video>
   </div>
   <!--q2 question-->
   <div style="display: none;" class="qWrapper left" id="q2Content">
@@ -109,7 +116,10 @@
 <section id="step3">
   <!--step three has a placeholder split nattative, it won't be functional but to show what it would do for demo purposes-->
   <div class="background">
-    <video id="q3video" src="media/vid/01_battlefield_trans.mp4"></video>
+    <video id="q3video">
+      <source src="media/vid/03.mp4">
+      <source src="media/vid/03.webm">
+    </video>
   </div>
   <!--q3 question-->
   <div style="display: none;" class="qWrapper right" id="q3Content">
@@ -133,8 +143,33 @@
 
 <section id="step4">
   <div class="background">
-    <video id="q4video" src="media/vid/01_battlefield_trans.mp4"></video>
+    <video id="q4video">
+      <source src="media/vid/04.mp4">
+      <source src="media/vid/04.webm">
+    </video>
   </div>
+  <div class="wrapper" style="display: none;" id="splitWrapper">
+    <h2>Switch to Chris' point of view or continue with John.</h2>
+    <!--button to kill loop, and go into q1-->
+    <div class="button-wrapper">
+      <button id="chrisButton" class="dogtag"><span>Follow Chris</span></button>
+      <button id="johnButton" class="dogtag"><span>Follow John</span></button>
+    </div>
+  </div>
+  <script>
+    var q4 = Popcorn("#q4video");
+
+    // cue this time at the split.
+    q4.cue( 4, function() {
+      q4.pause();
+      var splitWrapper = document.getElementById("splitWrapper");
+      splitWrapper.style.display = "table-cell"
+      document.getElementById("johnButton").addEventListener("click", function() {
+        splitWrapper.style.display = "none";
+        q4.play();
+      }, false);
+    });
+  </script>
   <!--q4 question-->
   <div style="display: none;" class="qWrapper left" id="q4Content">
     <h2>Would you attempt to save this soldier and risk being killed for treason, or follow orders and kill him?</h2>
@@ -164,7 +199,10 @@
 <section id="step5-yes">
     <!--<h2>Zehad helps Najah using his medical supplies.</h2>-->
     <div class="background">
-        <video id="q5-yes-video" src="media/vid/01_battlefield_trans.mp4"></video>
+        <video id="q5-yes-video">
+          <source src="media/vid/05a.mp4">
+          <source src="media/vid/05a.webm">
+        </video>
     </div>
     <!--script to load question infographic-->
     <script>
@@ -180,7 +218,10 @@
 <section id="step5-no">
   <!--<h2>Najah was killed.</h2>-->
     <div class="background">
-        <video id="q5-no-video" src="media/vid/01_battlefield_trans.mp4"></video>
+        <video id="q5-no-video">
+          <source src="media/vid/05b.mp4">
+          <source src="media/vid/05b.webm">
+        </video>
     </div>
     <!--script to load question infographic-->
     <script>
@@ -197,6 +238,25 @@
 
 <section id="step6">
     <!--Insert infographic HTML here-->
+  <div class="background fadeout">
+    <img src="media/img/01_intro_title_01.png">
+  </div>
+  <div class="stats-wrapper">
+    <h2>People who decided to save Chris</h2>
+    <div><em>* These are mock charts.</em></div>
+    <div class="chart-wrapper">
+      <p>by Region</p>
+      <div id="chartdiv1" class="chart"></div>
+    </div>
+    <div class="chart-wrapper">
+      <p>by Ethnicity</p>
+      <div id="chartdiv2" class="chart"></div>
+    </div>
+    <div class="chart-wrapper">
+      <p>by Religion</p>
+      <div id="chartdiv3" class="chart"></div>
+    </div>
+  </div>
 </section>
 
 
