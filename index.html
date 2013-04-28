@@ -193,13 +193,14 @@
     <!--script to load question 4 video content when video finishes-->
     <script>
         document.getElementById("q5-yes-video").addEventListener("ended", function() {
-            document.getElementById("infographic").style.display="block";
+            console.log("should load infographic");
+            document.getElementById( "step5-yes").removeClass('focused').addClass('completed');
+            document.getElementById( "step6").addClass('focused');
         }, false);
     </script>
-
-
-
 </section>
+
+
 <section id="step5-no">
     <video id="q5-no-video" src="media/vid/01_battlefield_trans.mp4"></video>
   <h2>Najah was killed.</h2>
@@ -208,7 +209,7 @@
 
 
 
-<section id="infographic">
+<section id="step6">
     <section>
         <p>Saved by Region</p>
         <div id="chartdiv1" class="chart">
