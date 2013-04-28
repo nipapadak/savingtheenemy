@@ -24,11 +24,17 @@
   <!--create popcorn text track events for q1 video-->
   <script>
     var pIntro = Popcorn("#introLoop");
-console.log(pIntro.media.duration);
-    pIntro.cue(pIntro.duration()-1, function() {
-console.log("in cue");
-      pIntro.currentTime(0).play();
-    });
+    if ( pIntro.readyState() >= 1 ) {
+      pIntro.cue(pIntro.duration()-1, function() {
+        pIntro.currentTime(0).play();
+      });
+    } else {
+      pIntro.on("loadedmetadata", function() {
+        pIntro.cue(pIntro.duration()-1, function() {
+          pIntro.currentTime(0).play();
+        });
+      });
+    }
 
     var p = Popcorn("#q1video");
     p.text({
