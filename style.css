@@ -124,6 +124,8 @@ section p {
 }
 
 #q1text > div {
+  transition-property: opacity;
+  transition-duration: 2s;
   position: absolute;
   left: 0;
   width: 100%;

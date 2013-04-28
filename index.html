@@ -4,7 +4,7 @@
   <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
   <script src="https://raw.github.com/mozilla/popcorn-js/master/popcorn.js"></script>
-  <script src="https://raw.github.com/mozilla/popcorn-js/master/plugins/text/popcorn.text.js"></script>
+  <script src="popcorn.text.js"></script>
 </head>
 <body>
 
@@ -12,6 +12,7 @@
   <!--loop intro-->
   <!--webm of these videos?-->
   <div class="background">
+    <img src="01_intro_title_01.png">
     <!--<video id="introLoop" src="media/vid/01_battlefield_trans.mp4"></video>-->
   </div>
   <div class="wrapper" id="titleWrapper">
@@ -40,22 +41,16 @@
 
     var p = Popcorn("#q1video");
     p.text({
-       start: 5,
-       end: 10,
+       start: 3,
+       end: 11,
        target: "q1text",
-       text: "first"
+       text: "There is a war going on between two enemy factions: army A and army B. John is a soldier with army A, Chris is a soldier with army B."
      })
      .text({
-       start: 10,
-       end: 15,
+       start: 13,
+       end: 21,
        target: "q1text",
-       text: "second"
-     })
-     .text({
-       start: 15,
-       end: 20,
-       target: "q1text",
-       text: "third"
+       text: "John is given orders to go into army B's conquered bunkers and kill remaining enemies, some of whom may still be armed. "
      });
   </script>
   <!--script to kill loop, and play q1 video-->
@@ -79,10 +74,10 @@
   </script>
   <!--q1 questions-->
   <div style="display: none;" class="qWrapper right" id="q1Content">
-    <h1>Question 1: What would you do?</h1>
+    <h1>If you were in his shoes, would you follow orders and go into the bunker, or escape now, knowing your safety would be guaranteed?</h1>
     <!--buttons send us off to question 2-->
-    <button class="next" value="yes">Follow orders and enter the bunker?</button>
-    <button class="next" value="no">Or disobey orders and become a deserter?</button>
+    <button class="next" value="yes">Enter bunker</button>
+    <button class="next" value="no">Leave post</button>
   </div>
 </section>
 
@@ -92,10 +87,10 @@
   </div>
   <!--q2 question-->
   <div style="display: none;" class="qWrapper left" id="q2Content">
-    <h1>Question 2: What would you do?</h1>
+    <h1>John hears someone moving. Would you defend yourself and fire your rifle or hold fire approach further to investigate?</h1>
     <!--buttons send us off to question 3-->
-    <button class="next" value="no">Open fire</button>
-    <button class="next" value="yes">Or hold fire and investigate further</button>
+    <button class="next" value="no">Shoot</button>
+    <button class="next" value="yes">Approach</button>
   </div>
   <!--script to load question 2 video content when video finishes-->
   <script>
@@ -109,15 +104,16 @@
 </section>
 
 <section id="step3">
+  <!--step three has a placeholder split nattative, it won't be functional but to show what it would do for demo purposes-->
   <div class="background">
     <video id="q3video" src="media/vid/01_battlefield_trans.mp4"></video>
   </div>
   <!--q3 question-->
   <div style="display: none;" class="qWrapper right" id="q3Content">
-    <h1>Question 3: What would you do?</h1>
+    <h1>John sees the wounded soldier. In this situation would you shoot the injured soldier now, or approach closer to investigate his injuries?</h1>
     <!--buttons send us off to question 4-->
-    <button class="next" value="yes">Help Zehad using your medical supplies.</button>
-    <button class="next" value="no">Execute Najah.</button>
+    <button class="next" value="yes">Investigate</button>
+    <button class="next" value="no">Shoot</button>
   </div>
   <!--script to load question 3 video content when video finishes-->
   <script>
@@ -136,10 +132,10 @@
   </div>
   <!--q4 question-->
   <div style="display: none;" class="qWrapper left" id="q4Content">
-    <h1>Question 4: What would you do?</h1>
+    <h1>Would you attempt to save this soldier and risk being killed for treason, or follow orders and kill him?</h1>
     <!--buttons send us off to question 5 a or b-->
-    <button data-next="step5-yes" class="next" value="yes">Continue to help Najah, even though he has a live hand grenade?</button>
-    <button data-next="step5-no" class="next" value="no">Or defend yourself and execute Najah?</button>
+    <button data-next="step5-yes" class="next" value="yes">Save him</button>
+    <button data-next="step5-no" class="next" value="no">Kill him</button>
   </div>
   <!--script to load question 4 video content when video finishes-->
   <script>
