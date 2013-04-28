@@ -25,7 +25,8 @@
   <script>
     var pIntro = Popcorn("#introLoop");
     pIntro.cue(pIntro.duration()-1, function() {
-      pIntro.play(0);
+console.log("in cue");
+      pIntro.currentTime(0).play();
     });
 
     var p = Popcorn("#q1video");
