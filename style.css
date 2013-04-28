@@ -14,6 +14,12 @@ button {
   outline: none;
 }
 
+h1 {
+  font-family: 'Armata', sans-serif;
+  font-size: 72px;
+  text-transform: uppercase;
+}
+
 h2 {
   font-family: 'Armata', sans-serif;
   font-size: 48px;
@@ -129,6 +135,10 @@ section p {
   right: 50px;
 }
 
+.fadeout {
+  opacity: 0.3;
+}
+
 #q1text > div {
   font-size: 40px;
   transition-property: opacity;
@@ -140,4 +150,49 @@ section p {
   text-align: center;
   bottom: 10%;
   text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;
+}
+
+/* Infographic styles */
+.chart {
+  border: 0;
+  color: #fff;
+  float:left;
+  width:600px;
+  height:330px;
+  position:relative;
+}
+
+.chart-wrapper {
+  float: left;
+}
+
+.chart-wrapper:last-child {
+  margin-left: 300px;
+}
+
+.stats-wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+#step6 p {
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+#step6 h2 {
+  text-align: center;
+}
+
+#step6 em {
+  font-size: 12px;
+  text-align: right;
+}
+
+svg > g > g > rect,
+svg > g > g > rect + text > tspan {
+  display: none
 }
