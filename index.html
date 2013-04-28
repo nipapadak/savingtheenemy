@@ -2,51 +2,150 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
+  <script src="https://raw.github.com/mozilla/popcorn-js/master/popcorn.js"></script>
+  <script src="https://raw.github.com/mozilla/popcorn-js/master/plugins/text/popcorn.text.js"></script>
 </head>
 <body>
+
 <section id="step1" class="focused">
+  <!--loop intro-->
+  <!--webm of these videos?-->
   <div class="background">
-    <img src="http://www.download-wallpaper.co.uk/main.php?g2_view=core.DownloadItem&g2_itemId=102&g2_serialNumber=2">
+    <!--<video id="introLoop" src="media/vid/01_battlefield_trans.mp4"></video>-->
   </div>
-  <div class="wrapper">
-    <h2>Zahed has been ordered to enter the bunker, and kill any survivors</h2>
-    <p>If you were Zahed, Would you enter the bunker, following orders and risking your life or leave now, ensuring your safety but becoming a deserter?</p>
-    <button class="yes">Follow orders and enter the bunker?</button>
-    <button class="no">Or disobey orders and become a deserter?</button>
+  <div class="wrapper" id="titleWrapper">
+    <h1>Saving the Enemy</h1>
+    <!--button to kill loop, and go into q1-->
+    <button id="startQ1">begin</button>
+  </div>
+  <!--q1 video to bunker-->
+  <div class="background">
+    <video style="display:none;" id="q1video" src="media/vid/01_battlefield_trans.mp4"></video>
+  </div>
+  <!--3 blocks of text, 5 seconds each-->
+  <div id="q1text"></div>
+  <!--create popcorn text track events for q1 video-->
+  <script>
+    /*var pIntro = Popcorn("#introLoop");
+    if ( pIntro.readyState() >= 4 ) {
+      pIntro.currentTime(5);
+    } else {
+      pIntro.on("canplay", function() {
+        pIntro.currentTime(5);
+      });
+    }*/
+
+    var p = Popcorn("#q1video");
+    p.text({
+       start: 5,
+       end: 10,
+       target: "q1text",
+       text: "first"
+     })
+     .text({
+       start: 10,
+       end: 15,
+       target: "q1text",
+       text: "second"
+     })
+     .text({
+       start: 15,
+       end: 20,
+       target: "q1text",
+       text: "third"
+     });
+  </script>
+  <!--script to kill loop, and play q1 video-->
+  <script>
+    var startButton = document.getElementById("startQ1");
+    startButton.addEventListener("click", function() {
+      document.getElementById("titleWrapper").style.display="none";
+      //var introVideo = document.getElementById("introLoop");
+      //introVideo.style.display="none";
+      var q1Video = document.getElementById("q1video");
+      q1video.style.display="block";
+      q1Video.play();
+      q1Video.addEventListener("ended", function() {
+        var q1Content = document.getElementById("q1Content");
+        q1Content.style.display="block";
+        $('#q1Content').find('.next').on('click', function() {
+          document.getElementById("q2video").play();
+        });
+      }, false);
+    }, false);
+  </script>
+  <!--q1 questions-->
+  <div style="display: none;" class="qWrapper right" id="q1Content">
+    <h1>Question 1: What would you do?</h1>
+    <!--buttons send us off to question 2-->
+    <button class="next" value="yes">Follow orders and enter the bunker?</button>
+    <button class="next" value="no">Or disobey orders and become a deserter?</button>
   </div>
 </section>
+
 <section id="step2">
   <div class="background">
-    <img src="http://images2.layoutsparks.com/1/138738/sea-turtle-under-water.jpg">
+    <video id="q2video" src="media/vid/01_battlefield_trans.mp4"></video>
   </div>
-  <div class="wrapper">
-    <h2>Zehad enters the bunker and hears the moaning of a wounded enemy soldier.</h2>
-    <p>If you were Zehad, would you investigate further or open fire, hoping to hit any remaining survivors?</p>
-    <button class="no">Open fire</button>
-    <button class="yes">Or hold fire and investigate further</button>
+  <!--q2 question-->
+  <div style="display: none;" class="qWrapper left" id="q2Content">
+    <h1>Question 2: What would you do?</h1>
+    <!--buttons send us off to question 3-->
+    <button class="next" value="no">Open fire</button>
+    <button class="next" value="yes">Or hold fire and investigate further</button>
   </div>
+  <!--script to load question 2 video content when video finishes-->
+  <script>
+    document.getElementById("q2video").addEventListener("ended", function() {
+      document.getElementById("q2Content").style.display="block";
+      $('#q2Content').find('.next').on('click', function() {
+        document.getElementById("q3video").play();
+      });
+    }, false);
+  </script>
 </section>
+
 <section id="step3">
   <div class="background">
-    <img src="http://fc09.deviantart.net/fs71/i/2011/151/1/6/forest_stock_4_by_geddas_stock-d3hoxvh.jpg">
+    <video id="q3video" src="media/vid/01_battlefield_trans.mp4"></video>
   </div>
-  <div class="wrapper">
-    <h2>Zehad investigates and finds Najah, the wounded soldier to have fatal wounds.</h2>
-    <h2>Without medical help, Najah would die.</h2>
-    <p>If you were Zehad, would you stabilize Najah or execute him?</p>
-    <button class="yes">Help Zehad using your medical supplies.</button>
-    <button class="no">Execute Najah.</button>
+  <!--q3 question-->
+  <div style="display: none;" class="qWrapper right" id="q3Content">
+    <h1>Question 3: What would you do?</h1>
+    <!--buttons send us off to question 4-->
+    <button class="next" value="yes">Help Zehad using your medical supplies.</button>
+    <button class="next" value="no">Execute Najah.</button>
   </div>
+  <!--script to load question 3 video content when video finishes-->
+  <script>
+    document.getElementById("q3video").addEventListener("ended", function() {
+      document.getElementById("q3Content").style.display="block";
+      $('#q3Content').find('.next').on('click', function() {
+        document.getElementById("q4video").play();
+      });
+    }, false);
+  </script>
 </section>
+
 <section id="step4">
-  <div class="wrapper">
-    <h2>Upon further investigation, Zehad finds Najah is holding a live hand grenade.</h2>
-    <h2>Zehad also finds Najah has photos of his family.</h2>
-    <p>If you were Zehad, would you consider the hand grenade a threat, or continue to help him?</p>
-    <button data-next="step5-yes" class="yes">Continue to help Najah, even though he has a live hand grenade?</button>
-    <button data-next="step5-no" class="no">Or defend yourself and execute Najah?</button>
+  <div class="background">
+    <video id="q4video" src="media/vid/01_battlefield_trans.mp4"></video>
   </div>
+  <!--q4 question-->
+  <div style="display: none;" class="qWrapper left" id="q4Content">
+    <h1>Question 4: What would you do?</h1>
+    <!--buttons send us off to question 5 a or b-->
+    <button data-next="step5-yes" class="next" value="yes">Continue to help Najah, even though he has a live hand grenade?</button>
+    <button data-next="step5-no" class="next" value="no">Or defend yourself and execute Najah?</button>
+  </div>
+  <!--script to load question 4 video content when video finishes-->
+  <script>
+    document.getElementById("q4video").addEventListener("ended", function() {
+      document.getElementById("q4Content").style.display="block";
+    }, false);
+  </script>
 </section>
+
 <section id="step5-yes">
   <h2>Zehad helps Najah using his medical supplies.</h2>
 </section>
