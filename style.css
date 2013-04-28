@@ -107,7 +107,6 @@ section p {
 }
 
 .qWrapper {
-  display: absolute;
   position: static;
   text-align: center;
   vertical-align: middle;
