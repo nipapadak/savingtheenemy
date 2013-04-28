@@ -1,9 +1,8 @@
 <!doctype html>
 <html>
 <head>
-  <link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
-  <script src="https://raw.github.com/mozilla/popcorn-js/master/popcorn.js"></script>
+  <script src="//raw.github.com/mozilla/popcorn-js/master/popcorn.js"></script>
   <script src="popcorn.text.js"></script>
 </head>
 <body>
@@ -16,7 +15,7 @@
     <!--<video id="introLoop" src="media/vid/01_battlefield_trans.mp4"></video>-->
   </div>
   <div class="wrapper" id="titleWrapper">
-    <h1>Saving the Enemy</h1>
+    <h2>Saving the Enemy</h2>
     <!--button to kill loop, and go into q1-->
     <div class="button-wrapper">
       <button id="startQ1" class="dogtag"><span>begin</span></button>
@@ -44,13 +43,13 @@
        start: 3,
        end: 11,
        target: "q1text",
-       text: "There is a war going on between two enemy factions: army A and army B. John is a soldier with army A, Chris is a soldier with army B."
+       text: "There is a war going on between two enemy factions:<br/> army A and army B. John is a soldier with army A,<br/> Chris is a soldier with army B."
      })
      .text({
        start: 13,
        end: 21,
        target: "q1text",
-       text: "John is given orders to go into army B's conquered bunkers and kill remaining enemies, some of whom may still be armed. "
+       text: "John is given orders to go into army B's conquered bunker<br/> and kill remaining enemies, some of whom may still be armed. "
      });
   </script>
   <!--script to kill loop, and play q1 video-->
@@ -74,10 +73,12 @@
   </script>
   <!--q1 questions-->
   <div style="display: none;" class="qWrapper right" id="q1Content">
-    <h1>If you were in his shoes, would you follow orders and go into the bunker, or escape now, knowing your safety would be guaranteed?</h1>
+    <h2>If you were in his shoes, would you follow orders and go into the bunker, or escape now, knowing your safety would be guaranteed?</h2>
     <!--buttons send us off to question 2-->
-    <button class="next" value="yes">Enter bunker</button>
-    <button class="next" value="no">Leave post</button>
+    <div class="button-wrapper">
+      <button class="dogtag next" value="yes"><span>Enter bunker</span></button>
+      <button class="dogtag next" value="no"><span>Leave post</span></button>
+    </div>
   </div>
 </section>
 
@@ -87,10 +88,12 @@
   </div>
   <!--q2 question-->
   <div style="display: none;" class="qWrapper left" id="q2Content">
-    <h1>John hears someone moving. Would you defend yourself and fire your rifle or hold fire approach further to investigate?</h1>
+    <h2>John hears someone moving. Would you defend yourself and fire your rifle or hold fire approach further to investigate?</h2>
     <!--buttons send us off to question 3-->
-    <button class="next" value="no">Shoot</button>
-    <button class="next" value="yes">Approach</button>
+    <div class="button-wrapper">
+      <button class="dogtag next" value="no"><span>Shoot</span></button>
+      <button class="dogtag next" value="yes"><span>Approach</span></button>
+    </div>
   </div>
   <!--script to load question 2 video content when video finishes-->
   <script>
@@ -110,10 +113,12 @@
   </div>
   <!--q3 question-->
   <div style="display: none;" class="qWrapper right" id="q3Content">
-    <h1>John sees the wounded soldier. In this situation would you shoot the injured soldier now, or approach closer to investigate his injuries?</h1>
+    <h2>John sees the wounded soldier. In this situation would you shoot the injured soldier now, or approach closer to investigate his injuries?</h2>
     <!--buttons send us off to question 4-->
-    <button class="next" value="yes">Investigate</button>
-    <button class="next" value="no">Shoot</button>
+    <div class="button-wrapper">
+      <button class="dogtag next" value="yes"><span>Investigate</span></button>
+      <button class="dogtag next" value="no"><span>Shoot</span></button>
+    </div>
   </div>
   <!--script to load question 3 video content when video finishes-->
   <script>
@@ -132,10 +137,12 @@
   </div>
   <!--q4 question-->
   <div style="display: none;" class="qWrapper left" id="q4Content">
-    <h1>Would you attempt to save this soldier and risk being killed for treason, or follow orders and kill him?</h1>
+    <h2>Would you attempt to save this soldier and risk being killed for treason, or follow orders and kill him?</h2>
     <!--buttons send us off to question 5 a or b-->
-    <button data-next="step5-yes" class="next" value="yes">Save him</button>
-    <button data-next="step5-no" class="next" value="no">Kill him</button>
+    <div class="button-wrapper">
+      <button data-next="step5-yes" class="dogtag next" value="yes"><span>Save him</span></button>
+      <button data-next="step5-no" class="dogtag next" value="no"><span>Kill him</span></button>
+    </div>
   </div>
   <!--script to load question 4 video content when video finishes-->
     <script>
