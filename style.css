@@ -158,7 +158,7 @@ section p {
   color: #fff;
   float:left;
   width:600px;
-  height:400px;
+  height:330px;
   position:relative;
 }
 
@@ -179,7 +179,17 @@ section p {
   border: 0;
   color: #fff;
   font-size: 20px;
+  margin: 0;
   text-align: center;
+}
+
+#step6 h2 {
+  text-align: center;
+}
+
+#step6 em {
+  font-size: 12px;
+  text-align: right;
 }
 
 svg > g > g > rect,
