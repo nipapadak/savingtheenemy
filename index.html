@@ -14,7 +14,9 @@
     <video id="introLoop" autoplay loop src="media/vid/01_battlefield_trans.mp4"></video>
   </div>
   <!--button to kill loop, and go into q1-->
-  <button id="startQ1">begin</button>
+  <div  class="wrapper">
+    <button id="startQ1">begin</button>
+  </div>
   <!--q1 video to bunker-->
   <div class="background">
     <video style="display:none;" id="q1video" src="media/vid/01_battlefield_trans.mp4"></video>
@@ -63,7 +65,7 @@
     }, false);
   </script>
   <!--q1 questions-->
-  <div style="display: none;" id="q1Content">
+  <div style="display: none;" id="q1Content" class="wrapper">
     <!--buttons send us off to question 2-->
     <button class="next" value="yes">Follow orders and enter the bunker?</button>
     <button class="next" value="no">Or disobey orders and become a deserter?</button>
@@ -75,7 +77,7 @@
     <video id="q2video" src="media/vid/01_battlefield_trans.mp4"></video>
   </div>
   <!--q2 question-->
-  <div style="display: none;" id="q2Content">
+  <div style="display: none;" id="q2Content" class="wrapper">
     <!--buttons send us off to question 3-->
     <button class="next" value="no">Open fire</button>
     <button class="next" value="yes">Or hold fire and investigate further</button>
