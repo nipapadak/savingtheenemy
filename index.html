@@ -67,7 +67,7 @@
       q1Video.play();
       q1Video.addEventListener("ended", function() {
         var q1Content = document.getElementById("q1Content");
-        q1Content.style.display="table-cell";
+        q1Content.style.display="block";
         $('#q1Content').find('.next').on('click', function() {
           document.getElementById("q2video").play();
         });
@@ -75,7 +75,7 @@
     }, false);
   </script>
   <!--q1 questions-->
-  <div style="display: none;" class="wrapper" id="q1Content">
+  <div style="display: none;" class="qWrapper right" id="q1Content">
     <h1>Question 1: What would you do?</h1>
     <!--buttons send us off to question 2-->
     <button class="next" value="yes">Follow orders and enter the bunker?</button>
@@ -88,7 +88,7 @@
     <video id="q2video" src="media/vid/01_battlefield_trans.mp4"></video>
   </div>
   <!--q2 question-->
-  <div style="display: none;" class="wrapper" id="q2Content">
+  <div style="display: none;" class="qWrapper left" id="q2Content">
     <h1>Question 2: What would you do?</h1>
     <!--buttons send us off to question 3-->
     <button class="next" value="no">Open fire</button>
@@ -97,7 +97,7 @@
   <!--script to load question 2 video content when video finishes-->
   <script>
     document.getElementById("q2video").addEventListener("ended", function() {
-      document.getElementById("q2Content").style.display="table-cell";
+      document.getElementById("q2Content").style.display="block";
       $('#q2Content').find('.next').on('click', function() {
         document.getElementById("q3video").play();
       });
@@ -110,7 +110,7 @@
     <video id="q3video" src="media/vid/01_battlefield_trans.mp4"></video>
   </div>
   <!--q3 question-->
-  <div style="display: none;" class="wrapper" id="q3Content">
+  <div style="display: none;" class="qWrapper right" id="q3Content">
     <h1>Question 3: What would you do?</h1>
     <!--buttons send us off to question 4-->
     <button class="next" value="yes">Help Zehad using your medical supplies.</button>
@@ -119,7 +119,7 @@
   <!--script to load question 3 video content when video finishes-->
   <script>
     document.getElementById("q3video").addEventListener("ended", function() {
-      document.getElementById("q3Content").style.display="table-cell";
+      document.getElementById("q3Content").style.display="block";
       $('#q3Content').find('.next').on('click', function() {
         document.getElementById("q4video").play();
       });
@@ -132,7 +132,7 @@
     <video id="q4video" src="media/vid/01_battlefield_trans.mp4"></video>
   </div>
   <!--q4 question-->
-  <div style="display: none;" class="wrapper" id="q4Content">
+  <div style="display: none;" class="qWrapper left" id="q4Content">
     <h1>Question 4: What would you do?</h1>
     <!--buttons send us off to question 5 a or b-->
     <button data-next="step5-yes" class="next" value="yes">Continue to help Najah, even though he has a live hand grenade?</button>
@@ -141,7 +141,7 @@
   <!--script to load question 4 video content when video finishes-->
   <script>
     document.getElementById("q4video").addEventListener("ended", function() {
-      document.getElementById("q4Content").style.display="table-cell";
+      document.getElementById("q4Content").style.display="block";
     }, false);
   </script>
 </section>
