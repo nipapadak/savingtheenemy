@@ -6,6 +6,7 @@
   <script src="https://raw.github.com/mozilla/popcorn-js/master/plugins/text/popcorn.text.js"></script>
 </head>
 <body>
+
 <section id="step1" class="focused">
   <!--loop intro-->
   <!--webm of these videos?-->
@@ -64,29 +65,26 @@
     <button class="next" value="yes">Follow orders and enter the bunker?</button>
     <button class="next" value="no">Or disobey orders and become a deserter?</button>
   </div>
-  <!--<button class="yes">Follow orders and enter the bunker?</button>
-  <button class="no">Or disobey orders and become a deserter?</button>-->
-  <!--<div class="background">
-    <img src="http://www.download-wallpaper.co.uk/main.php?g2_view=core.DownloadItem&g2_itemId=102&g2_serialNumber=2">
-  </div>
-  <div class="wrapper">
-    <h2>Zahed has been ordered to enter the bunker, and kill any survivors</h2>
-    <p>If you were Zahed, Would you enter the bunker, following orders and risking your life or leave now, ensuring your safety but becoming a deserter?</p>
-    <button class="yes">Follow orders and enter the bunker?</button>
-    <button class="no">Or disobey orders and become a deserter?</button>
-  </div>-->
 </section>
+
 <section id="step2">
   <div class="background">
-    <img src="http://images2.layoutsparks.com/1/138738/sea-turtle-under-water.jpg">
+    <video id="q2video" ></video>
   </div>
-  <div class="wrapper">
-    <h2>Zehad enters the bunker and hears the moaning of a wounded enemy soldier.</h2>
-    <p>If you were Zehad, would you investigate further or open fire, hoping to hit any remaining survivors?</p>
-    <button class="next" value="no">Open fire</button>
-    <button class="next" value="yes">Or hold fire and investigate further</button>
+  <!--q2 question-->
+  <div style="display: none;" id="q2Content">
+    <!--buttons send us off to question 3-->
+    <button class="next" value="yes">Follow orders and enter the bunker?</button>
+    <button class="next" value="no">Or disobey orders and become a deserter?</button>
   </div>
+  <!--script to load question 2 video content when video finishes-->
+  <script>
+    document.getElementById("q2video").addEventListener("ended", function() {
+      document.getElementById("q2Content").style.display="block";
+    }, false);
+  </script>
 </section>
+
 <section id="step3">
   <div class="background">
     <img src="http://fc09.deviantart.net/fs71/i/2011/151/1/6/forest_stock_4_by_geddas_stock-d3hoxvh.jpg">
